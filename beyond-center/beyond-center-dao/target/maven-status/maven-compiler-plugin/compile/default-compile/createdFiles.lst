@@ -1,0 +1,5 @@
+com\beyond\mapper\common\AbstractBusinessMapper.class
+com\beyond\mapper\UserInfoMapper.class
+com\beyond\filter\UserInfoFilter.class
+com\beyond\mapper\api\IUserInfoMapper.class
+com\beyond\model\UserInfo.class
