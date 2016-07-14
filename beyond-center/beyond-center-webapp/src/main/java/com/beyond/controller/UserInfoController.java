@@ -45,6 +45,14 @@ public class UserInfoController {
 		lisi.setTrueName("李四");
 		lisi.setPassword("123456");
 		userInfos.add(lisi);
+
+		UserInfo wangwu = new UserInfo();
+		wangwu.setAge(20);
+		wangwu.setId(2);
+		wangwu.setName("wangwu");
+		wangwu.setTrueName("王五");
+		wangwu.setPassword("111111");
+		userInfos.add(wangwu);
 		
 		return userInfos;
 	}
