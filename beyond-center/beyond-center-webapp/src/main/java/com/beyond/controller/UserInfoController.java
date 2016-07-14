@@ -1,5 +1,6 @@
 package com.beyond.controller;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -22,6 +23,31 @@ public class UserInfoController {
 
 	@Autowired
 	private IUserInfoMapper userInfoMapper;
+
+	@RequestMapping(value = "/getUserList")
+	public List<UserInfo> getUserList(HttpServletRequest request,
+			HttpServletResponse response, ModelMap modelMap) {
+
+		List<UserInfo> userInfos = new LinkedList<>();
+		
+		UserInfo zhangsan = new UserInfo();
+		zhangsan.setAge(10);
+		zhangsan.setId(1);
+		zhangsan.setName("zhangsan");
+		zhangsan.setTrueName("张三");
+		zhangsan.setPassword("000000");
+		userInfos.add(zhangsan);
+		
+		UserInfo lisi = new UserInfo();
+		lisi.setAge(20);
+		lisi.setId(2);
+		lisi.setName("lisi");
+		lisi.setTrueName("李四");
+		lisi.setPassword("123456");
+		userInfos.add(lisi);
+		
+		return userInfos;
+	}
 
 	@RequestMapping(value = "/getList")
 	public List<UserInfo> getList(HttpServletRequest request,
